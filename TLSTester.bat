@@ -9,6 +9,6 @@ if "%siteUrl%"=="" (
     exit /b 1
 )
 
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0TLSscan.ps1" -Hostname "%siteUrl%"
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "%~dp0TLSTester.ps1" -Hostname "%siteUrl%"
 
 pause
