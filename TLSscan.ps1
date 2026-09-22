@@ -29,12 +29,11 @@ foreach ($flag in $versions.Keys) {
 
 Write-Host ("-" * 73)
 
-$PQCGroups = [ordered]@{
-    "X25519MLKEM768" = "hybrid ML-KEM768 + X25519"
-    "SecP256r1MLKEM768"   = "TLSv1.3 group: X448"
-    "SecP384r1MLKEM1024"  = "TLSv1.3 group: secp256r1"
-    "MLKEM768"  = "TLSv1.3 group: secp384r1"
-    "P-521"  = "TLSv1.3 group: secp521r1"
+$pqcGroups = [ordered]@{
+    "X25519MLKEM768"     = "ML-KEM768 + X25519"
+    "SecP256r1MLKEM768"  = "ML-KEM768 + P-256"
+    "SecP384r1MLKEM1024" = "ML-KEM1024 + P-384"
+    "MLKEM768"           = "ML-KEM768 (pure)"
 }
 
 $pqc = "" | & $OpenSslPath s_client -connect "$Hostname`:$Port" -groups ($pqcGroups.Keys -join ":") 2>&1 | Out-String
