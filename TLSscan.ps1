@@ -16,7 +16,8 @@ $versions = [ordered]@{
     "-tls1_2" = "TLSv1.2"
     "-tls1_3" = "TLSv1.3"
 }
-#Make an OpenSSL s_client call for each TLS version and check if the connection is successful. If it is, print the version and the cipher used. If not, print that the version is not supported.
+#Make an OpenSSL s_client call for each TLS version and check if the connection is successful.
+#If it is, print the version and the cipher used. If not, print that the version is not supported.
 foreach ($flag in $versions.Keys) {
     $result = "" | & $OpenSslPath s_client -connect "$Hostname`:$Port" $flag -cipher "DEFAULT@SECLEVEL=0" 2>&1 | Out-String
 
@@ -35,7 +36,8 @@ $pqcGroups = [ordered]@{
     "SecP384r1MLKEM1024" = "ML-KEM1024 + P-384"
     "MLKEM768"           = "ML-KEM768 (pure)"
 }
-
+#Make an OpenSSL s_client call for TLS 1.3 with the PQC groups and check if the connection is successful.
+#If it is, print the negotiated group. If not, print that PQC is not supported.   
 $pqc = "" | & $OpenSslPath s_client -connect "$Hostname`:$Port" -groups ($pqcGroups.Keys -join ":") 2>&1 | Out-String
 $negotiated = if ($pqc -match "Negotiated TLS1\.3 group:\s*(\S+)") { $Matches[1] }
 
