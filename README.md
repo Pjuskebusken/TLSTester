@@ -6,3 +6,7 @@ Can be run either running the TLSTester.ps1 directly from the terminal or by dou
 Requirements: **Git**
 
 <ins>**Only works on Windows**</ins>
+
+## How to run
+
+Clone the repository by running `git clone https://github.com/Pjuskebusken/TLSTester`
