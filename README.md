@@ -5,3 +5,5 @@ Can be run either running the TLSTester.ps1 directly from the terminal or by dou
 
 Requirements:
 Git
+
+<ins>**Only works on Windows**</ins>
