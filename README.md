@@ -16,5 +16,3 @@ Run the TLSTester.bat file.
 Or you can just clone the repository, but then I assume you know what you're doing :^)
 
 
-### Note
-This has only been tested with Git version 2.55.0.windows.3  
