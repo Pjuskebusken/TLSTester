@@ -9,9 +9,9 @@ Requirements: **Git**
 
 ## How to run
 
-Download the files by click on the green "<> Code" button in the top right.  
-Extract the files.  
-Run the TLSTester.bat file.  
+1. Download the files by click on the green "<> Code" button in the top right.  
+2. Extract the files.  
+3. Run the TLSTester.bat file.  
 
 Or you can just clone the repository, but then I assume you know what you're doing :^)
 
