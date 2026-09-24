@@ -1,5 +1,5 @@
 # TLSTester
-Small tool for scanning TLS version of a website using OpenSSL installed from Git.
+A small and lightweight tool for scanning TLS version of a website using OpenSSL installed from Git.
 
 Can be run either running the TLSTester.ps1 directly from the terminal or by double clicking the .bat file.
 
